@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content
+%}
+<h1 align="center">Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in notes %}
+  <li class="list-group-item">
+    {{ note.data | clean(tags=["li","ol","img","alignleft","aligncenter","alignright","alignjustify","bold","italic","underline",
+    "strikethrough","blockquote","subscript","superscript","code","p","h1","h2","h3","h4","h5","h6","div","address",
+    "pre","samp","forecolor","hilitecolor","fontname","fontsize","fontsize_class","span",'sup','em','strong','sub'],
+    attributes=["src"]) }}
+  </li>
+  Posted by {{ note.owner_email }} at {{ note.date }}
+  {% endfor %}
+</ul>
+{% endblock %}

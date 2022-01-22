@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Home{% endblock %} {% block content %}
+<h1 text-align="center"> Notes</h1>
+<ul class="list-group list-group-flush" id="notes">
+  {% for note in user.notes %}
+  <li class="list-group-item">
+    {{ note.data | clean(tags=["li","ol","img","alignleft","aligncenter","alignright","alignjustify","bold","italic","underline",
+    "strikethrough","blockquote","subscript","superscript","code","p","h1","h2","h3","h4","h5","h6","div","address",
+    "pre","samp","forecolor","hilitecolor","fontname","fontsize","fontsize_class","span",'sup','em','strong','sub'],
+    attributes=["src"]) }}
+    <button type="button" class="close" onClick="deleteNote({{ note.id }})">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <button type="button" class="Public" onClick="makePublic({{ note.id }})">
+      Make Public
+    </button>
+  </li>
+  {% endfor %}
+</ul>
+<form method="POST">
+  <textarea name="note" id="note" class="form-control"></textarea>
+  <br />
+  <div text-align="center">
+    <button type="submit" class="btn btn-primary">Add Note</button>
+  </div>
+</form>
+{% endblock %}
