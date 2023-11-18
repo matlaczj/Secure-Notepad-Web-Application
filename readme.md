@@ -1,6 +1,8 @@
 # Secure Notepad Web Application
 
-<img src="https://th.bing.com/th/id/OIG.Ugk9hKHmoYMrh_T1s5g8?w=1024&h=1024&rs=1&pid=ImgDetMain" width="300" height="300" style="display: block; margin: auto;">
+<p align="center">
+  <img src="secure-notepad-web-application.png" alt="Logo" width="400"/>
+</p>
 
 ## Description
 
