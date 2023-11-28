@@ -1,7 +1,7 @@
 # Secure Notepad Web Application
 
 <p align="center">
-  <img src="secure-notepad-web-application.png" alt="Logo" width="400"/>
+  <img src="logo.png" alt="Logo" width="350"/>
 </p>
 
 ## Description
